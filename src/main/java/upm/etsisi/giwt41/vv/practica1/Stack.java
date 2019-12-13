@@ -10,7 +10,7 @@ public class Stack {
 	 */
 	public Stack() {
 		this.arrayStack = new Integer[MAX_SIZE];
-		this.top = 1;
+		this.top = 0;
 	}
 
 	/**
@@ -23,9 +23,9 @@ public class Stack {
 	public void push(Integer element) {
 		if (top >= MAX_SIZE) {
 			System.out.println("The stack is full");
-		}
-		arrayStack[this.top] = element;
-		top++;
+		}else {
+                    arrayStack[this.top] = element;
+                    top++;}
 	}
 
 	/**
@@ -37,11 +37,11 @@ public class Stack {
 	public Integer pull() {
 		if (top <= 0) {
 			System.out.println("The stack is empty");
-			return 0;
+			return -1;
 		}
 
 		top--;
-		return arrayStack[top - 1];
+		return arrayStack[top];
 	}
 
 	/**
