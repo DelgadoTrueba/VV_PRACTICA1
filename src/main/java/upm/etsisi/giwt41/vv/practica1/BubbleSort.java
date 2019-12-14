@@ -7,15 +7,15 @@ public class BubbleSort {
      *
      * @param array The array to be sorted
      * @param size The count of total number of elements in array
-	 *
+     *
      */
-
     public static <T extends Comparable<T>> void BS(T array[], int size) {
         boolean swap;
+        int last = size - 1;
 
         do {
             swap = false;
-            for (int count = 0; count < size - 1; count++) {
+            for (int count = 0; count < last; count++) {
                 int comp = array[count].compareTo(array[count + 1]);
                 if (comp > 0) {
                     T temp = array[count];
