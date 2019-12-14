@@ -10,6 +10,9 @@ public class Goldbach {
      * @return True if n is prime, false if not.
      */
     public static boolean isPrime(Integer n) {
+        if (n <= 1) {
+            return false;
+        }
         for (int p = 2; p <= Math.sqrt(n); p++) {
             if (n % p == 0) {
                 return false;
@@ -30,9 +33,12 @@ public class Goldbach {
      * not. Also prints the decomposition if true.
      */
     public static boolean checkGoldbach(Integer n) {
-        for (int p = 1; p < n / 2; p++) {
+        if (n % 2 != 0) {
+            return true;
+        }
+        for (int p = 1; p <= n / 2; p++) {
             if (isPrime(p) && isPrime(n - p)) {
-                System.out.println(n + "=" + p + " & " + (n - p));
+                System.out.println(n + " = " + p + " & " + (n - p));
                 return true;
             }
         }
