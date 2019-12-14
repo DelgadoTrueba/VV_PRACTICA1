@@ -3,10 +3,39 @@ package upm.etsisi.giwt41.vv.practica1;
 public class Test {
 
     public static void main(String[] args) {
+        //Ejercicio A) BubbleSort
+        TestA1();
+        TestA2();
+        TestA3();
+
+        //Ejercicio B) Goldbach
+        TestB1();
+        TestB2();
+        TestB3();
+        TestB4();
+        TestB5();
+        TestB6();
+        TestB7();
+        TestB8();
+        
+        //Ejercicio C) Stack
+        TestC1();
+        TestC2();
+        TestC3();
+        TestC4();
+        TestC5();
+        TestC6();
+        TestC7();
+        TestC8();
+        TestC9();
+        TestC10();
+        TestC11();
+        TestC12();
+        TestC13();
         TestC14();
     }
-    
-    //Ejercicio A. BubbleSort
+
+    //Ejercicio A) BubbleSort
     public static void TestA1() {
         Comparable[] v = new Comparable[6];
         v[0] = 4;
@@ -25,8 +54,11 @@ public class Test {
         BubbleSort.BS(v, v.length);
     }
 
-    
-    //Ejercicio B. Goldbach
+    public static void TestA3() {
+        TestA1();
+    }
+
+    //Ejercicio B) Goldbach
     public static void TestB1() {
         Goldbach.checkGoldbach(6);
         Goldbach.checkGoldbach(22);
@@ -59,6 +91,10 @@ public class Test {
         Boolean test71 = Goldbach.isPrime(71);
     }
 
+    public static void TestB5() {
+        TestB1();
+    }
+
     public static void TestB6() {
         Boolean test6 = Goldbach.checkGoldbach(15);
         Boolean test22 = Goldbach.checkGoldbach(99);
@@ -77,8 +113,7 @@ public class Test {
         Boolean test52 = Goldbach.checkGoldbach(52);
     }
 
-    
-    //Ejercicio C. Stac
+    //Ejercicio C) Stac
     public static void TestC1() {
         Stack miPila = new Stack();
         miPila.push(5);
@@ -104,6 +139,10 @@ public class Test {
         miPila.push(6);
     }
 
+    public static void TestC5() {
+        TestC4();
+    }
+
     public static void TestC6() {
         Stack miPila = new Stack();
         miPila.push(1);
@@ -113,9 +152,17 @@ public class Test {
         int res = miPila.pull();
     }
 
+    public static void TestC7() {
+        TestC6();
+    }
+
     public static void TestC8() {
         Stack miPila = new Stack();
         int res = miPila.pull();
+    }
+
+    public static void TestC9() {
+        TestC8();
     }
 
     public static void TestC10() {
